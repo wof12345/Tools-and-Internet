@@ -1,0 +1,11 @@
+body {
+  width: 100%;
+  height: 5000px;
+}
+.paragraph {
+  font-family: Dancing Script;
+}
+.form {
+  background-color: rgba(128, 128, 128, 0.269);
+  border-radius: 8px;
+}
