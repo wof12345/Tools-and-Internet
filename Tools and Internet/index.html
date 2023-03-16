@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,58 +20,47 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <nav
-      class="bg-black w-full h-[250px] lg:h-[100px] lg:fixed lg:w-[1520px] lg:z-[100] sm:z-[100]"
+      class="bg-black fixed w-full p-6 h-max top-0 z-40 flex justify-between items-center"
     >
-      <div class="flex justify-between">
-        <h4
-          class="text-[35px] lg:text-[35px] lg:font-bold lg:mt-[30px] lg:ml-[150px] text-orange-700 sm:font-bold"
-        >
-          Foodie.
-        </h4>
-        <ul
-          class="text-xl lg:flex text-white mr-[130px] lg:gap-14 items-center lg:mr-[200px] cursor-pointer lg:text-lg mt-[50px] lg:mt-[20px]"
-        >
-          <li class="hover:text-orange-600">Home</li>
-          <li class="hover:text-orange-600">Service</li>
-          <li class="hover:text-orange-600">Review</li>
-          <li class="hover:text-orange-600">About Us</li>
-          <li class="hover:text-orange-600">Contract</li>
-        </ul>
-      </div>
+      <h4
+        class="text-[35px] lg:text-[35px] lg:font-bold lg:ml-[150px] text-orange-700 sm:font-bold"
+      >
+        Foodie.
+      </h4>
+      <ul
+        class="text-xl lg:flex text-white mr-[130px] lg:gap-14 items-center lg:mr-[100px] cursor-pointer lg:text-lg"
+      >
+        <li class="hover:text-orange-600">Home</li>
+        <li class="hover:text-orange-600">Service</li>
+        <li class="hover:text-orange-600">Review</li>
+        <li class="hover:text-orange-600">About Us</li>
+        <li class="hover:text-orange-600">Contract</li>
+      </ul>
     </nav>
 
     <!---------------------------------------------- Home PART------------------------------------------>
-
-    <div class="">
-      <div class="lg:w-full w-full">
-        <img src="./images/hero-bg.jpg" />
+    <div class="relative z-10 w-full h-[500px] mt-[90px] overflow-hidden">
+      <div class="absolute w-full h-[500px] z-0">
+        <img class="" src="./images/hero-bg.jpg" />
       </div>
-      <div class="">
-        <div
-          class="slide lg:relative absolute mt-[-70px] right-0 lg:top-[0px] lg:ml-[230px] lg:mt-[-870px] w-[300px] lg:w-[1280px]"
-        >
-          <img src="./images/hero-bg-shape.png" />
-        </div>
-        <div
-          class="burgar absolute lg:relative ml-[210px] mt-[10px] w-[140px] lg:mt-[-570px] lg:ml-[770px] lg:h-[400px] lg:w-[600px]"
-        >
-          <img src="./images/hero-banner.png" />
-        </div>
 
-        <div class="header">
-          <h1
-            class="text-white relative text-[15px] w-[300px] ml-[10px] mt-[-130px] lg:top-[-350px] lg:text-[70px] lg:font-bold lg:ml-[150px] lg:w-[550px]"
-          >
-            Super Delicious Burger in Town!
-          </h1>
-          <p
-            class="paragraph lg:relative text-white text-sm w-[180px] mt-[10px] ml-[10px] top-[-350px] lg:text-2xl lg:font-bold lg:w-[500px] lg:ml-[140px] lg:mt-[20px]"
-          >
+      <div class="absolute right-0 bottom-[-2px]">
+        <img class="" src="./images/hero-bg-shape.png" />
+      </div>
+
+      <div class="flex justify-between items-center h-full relative z-10 p-20">
+        <div class="header text-white text-6xl px-1 flex-1">
+          <h1 class="">Super Delicious Burger in Town!</h1>
+          <p class="text-lg text-yellow-200">
             Food is Any substance Consumed To provide Nutritional Support For
             Any Organism
           </p>
+        </div>
+        <div class="burgar flex-2">
+          <img class="h-96" src="./images/hero-banner.png" />
         </div>
       </div>
     </div>
@@ -82,71 +71,79 @@
       class="carousel slide"
       data-bs-ride="carousel"
     >
-      <div class="carousel-inner lg:mt-[200px] mt-[100px]">
-        <div class="carousel-item active">
-          <img
-            src="./images/Ambur-Chicken-Biryani.jpg"
-            class="h-96 lg:w-[600px] lg:ml-[100px] ml-[0px]"
-            alt="..."
-          />
-          <h1
-            class="lg:absolute mt-[10px] text-center top-[0px] lg:w-[400px] lg:ml-[800px] lg:mt[0px] lg:font-monospace lg:text-lg"
-          >
-            Ambur biryani is a delightful one-pot meal with succulent pieces of
-            meat cooked to perfection along with the aromatic jeera samba rice,
-            mint leaves, coriander leaves and whole spices. The flavor and taste
-            of meat is more dominant in Ambur biryani than the other ones due to
-            the fewer spices used.There's chicken, mutton, beef and prawn as
-            options, with the flavour of mint and coriander standing out. The
-            highlight of this biryani is the fact that chefs soak the meat in
-            curd be fore adding it to the rice, which imparts a unique taste to
-            the dish.
-          </h1>
+      <div class="carousel-inner mt-[50px]">
+        <div class="carousel-item active px-4">
+          <div class="flex items-center">
+            <img
+              src="./images/Ambur-Chicken-Biryani.jpg"
+              class="w-[500px] aspect-square object-cover"
+              alt="..."
+            />
+            <div class="text-start p-5">
+              <h1 class="text-2xl font-semibold">Ambur</h1>
+              <p class="">
+                Ambur biryani is a delightful one-pot meal with succulent pieces
+                of meat cooked to perfection along with the aromatic jeera samba
+                rice, mint leaves, coriander leaves and whole spices. The flavor
+                and taste of meat is more dominant in Ambur biryani than the
+                other ones due to the fewer spices used.There's chicken, mutton,
+                beef and prawn as options, with the flavour of mint and
+                coriander standing out. The highlight of this biryani is the
+                fact that chefs soak the meat in curd be fore adding it to the
+                rice, which imparts a unique taste to the dish.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img
-            src="./images/Butter-Masala-Dosa.png"
-            class="h-96 w-[600px] lg:ml-[100px] ml-[0px]"
-            alt="..."
-          />
-          <h1
-            class="lg:absolute mt-[10px] text-center top-[0px] lg:w-[400px] lg:ml-[800px] lg:mt-[0px] lg:font-monospace lg:text-lg"
-          >
-            Paneer Butter Masala is one of India’s most popular paneer gravy
-            recipes, and with good reason! Indian cottage cheese cubes are
-            smothered in a creamy, lightly spiced tomato sauce that is downright
-            delicious. With my video and step-by-step guide you can easily make
-            this restaurant style Paneer Butter Masala recipe at home!Paneer
-            butter masala is usually accompanied by plain rice or naan. Paneer
-            Tikka Masala is a spicier, lighter dish whose sauce is prepared
-            using crushed tomatoes, onions and paneer cubes that were
-            pre-marinated with yogurt and spices.
-          </h1>
+        <div class="carousel-item px-4">
+          <div class="flex items-center">
+            <img
+              src="./images/Butter-Masala-Dosa.png"
+              class="w-[500px] aspect-square object-cover"
+              alt="..."
+            />
+            <div class="text-start p-5">
+              <h1 class="text-2xl font-semibold">Ambur</h1>
+              <p class="">
+                Ambur biryani is a delightful one-pot meal with succulent pieces
+                of meat cooked to perfection along with the aromatic jeera samba
+                rice, mint leaves, coriander leaves and whole spices. The flavor
+                and taste of meat is more dominant in Ambur biryani than the
+                other ones due to the fewer spices used.There's chicken, mutton,
+                beef and prawn as options, with the flavour of mint and
+                coriander standing out. The highlight of this biryani is the
+                fact that chefs soak the meat in curd be fore adding it to the
+                rice, which imparts a unique taste to the dish.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img
-            src="./images/Chicken-Biryani-hyd.jpg"
-            class="h-96 w-[600px] lg:ml-[100px] ml-[0px]"
-            alt="..."
-          />
-          <h1
-            class="lg:absolute mt-[10px] text-center top-[0px] lg:w-[400px] lg:ml-[800px] lg:mt-[-1px] lg:font-monospace lg:text-lg"
-          >
-            Biryani is known for its aroma and flavor. Fresh herbs, saffron, and
-            basmati rice give it a sweet-floral aroma that hits the nose before
-            you taste it. Whole garam masala, fried onions, and marinated meat
-            provide warmth and subtle heat to the dish. Overall, it tastes like
-            a savory, spiced rice pilaf. With my video and step-by-step guide
-            you can easily make this restaurant style Paneer Butter Masala
-            recipe at home!Paneer butter masala is usually accompanied by plain
-            rice or naan. Paneer Tikka Masala is a spicier, lighter dish whose
-            sauce is prepared using crushed tomatoes, onions and paneer cubes
-            that were pre-marinated with yogurt and spices.
-          </h1>
+        <div class="carousel-item px-4">
+          <div class="flex items-center">
+            <img
+              src="./images/Chicken-Biryani-hyd.jpg"
+              class="w-[500px] aspect-square object-cover"
+              alt="..."
+            />
+            <div class="text-start p-5">
+              <h1 class="text-2xl font-semibold">Ambur</h1>
+              <p class="">
+                Ambur biryani is a delightful one-pot meal with succulent pieces
+                of meat cooked to perfection along with the aromatic jeera samba
+                rice, mint leaves, coriander leaves and whole spices. The flavor
+                and taste of meat is more dominant in Ambur biryani than the
+                other ones due to the fewer spices used.There's chicken, mutton,
+                beef and prawn as options, with the flavour of mint and
+                coriander standing out. The highlight of this biryani is the
+                fact that chefs soak the meat in curd be fore adding it to the
+                rice, which imparts a unique taste to the dish.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <button
-        class="carousel-control-prev"
+        class="carousel-control-prev absolute left-0 bg-black w-6 z-40"
         type="button"
         data-bs-target="#carouselExampleControls"
         data-bs-slide="prev"
@@ -155,7 +152,7 @@
         <span class="visually-hidden">Previous</span>
       </button>
       <button
-        class="carousel-control-next lg:mr-[100px] mr-[10px]"
+        class="carousel-control-next absolute right-0 bg-black w-6 z-40"
         type="button"
         data-bs-target="#carouselExampleControls"
         data-bs-slide="next"
@@ -164,234 +161,254 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <!-- ----------------------------------------------------MY CARD------------------------------ -->
 
-    <div class="header3 lg: bg-orange-100 lg:h-[2200px]">
-      <h1
-        class="text-center font-bold text-5xl lg:mt-[120px] mt-[50px] text-black underline"
-      >
-        SERVICE
-      </h1>
+    <div class="header3 bg-orange-100 mt-10">
+      <h1 class="w-full p-6 font-bold text-2xl underline pl-5">SERVICE</h1>
 
-      <div class="mycard">
-        <div
-          class="lg:absolute cardDetails mt-[100px] lg:h-[690px] lg:w-[400px] lg:shadow-2xl lg:rounded-lg lg:mt-[100px] lg:ml-[50px]"
-        >
-          <h1 class="text-center text-3xl font-poppins font-bold">My Card</h1>
-          <h2 class="mt-[40px] text-xl ml-[20px]">
-            Total Product:<p1 class="TotalProduct ml-[20px]"></p1>
-          </h2>
-          <p class="mt-[40px] text-xl ml-[20px]">
-            Price:<p1 class="Price ml-[20px]"></p1>
+      <div class="flex p-6">
+        <div class="mycard flex-2 flex flex-col items-start">
+          <h1 class="text-center text-3xl font-poppins font-bold min-w-[300px]">
+            My Card
+          </h1>
+          <h2 class="text-xl">Total Product:<p1 class="TotalProduct"></p1></h2>
+          <p class="text-xl">Price:<p1 class="Price"></p1></p>
+          <p class="Delivary Charge text-xl">
+            Delivery Charge:<p1 class="DC font-semibold">$4</p1>
           </p>
-          <p class="Delivary Charge mt-[40px] text-xl ml-[20px]">
-            Delivary Charge:<p1 class="DC ml-[20px] font-semibold">$4</p1>
+          <p class="Shipping Cost text-xl">
+            Shipping Cost:<p1 class="SC font-semibold">$0</p1>
           </p>
-          <p class="Shipping Cost mt-[40px] text-xl ml-[20px]">
-            Shipping Cost:<p1 class="SC font-semibold ml-[20px]">$0</p1>
+          <p class="Total Price text-xl">
+            Total Price:<p1 class="TotalPrice font-semibold"></p1>
           </p>
-          <p class="Total Price mt-[40px] text-xl ml-[20px]">
-            Total Price:<p1 class="TotalPrice font-semibold ml-[20px]"></p1>
-          </p>
-          <p class="mt-[40px] text-xl ml-[20px]">
-            Tax(15%): <p1 class="Tax font-semibold ml-[20px]"></p1>
-          </p>
-          <p class="Grand total mt-[40px] text-xl ml-[20px]">
-            Grand total:<p1 class="GrandTotal font-semibold ml-[20px]"></p1>
+          <p class="text-xl">Tax(15%): <p1 class="Tax font-semibold"></p1></p>
+          <p class="Grand total text-xl">
+            Grand total:<p1 class="GrandTotal font-semibold"></p1>
           </p>
           discount(5%)
-          <p class="Final Total mt-[40px] text-xl ml-[20px]">
-            Final Total:<p1 class="FinalTotal font-semibold ml-[20px]"></p1>
+          <p class="Final Total text-xl">
+            Final Total:<p1 class="FinalTotal font-semibold"></p1>
           </p>
-          <button class="Order mt-[30px] ml-[160px] font-bold text-lg">
-            Order Now
-          </button>
+          <button class="Order font-bold text-lg self-center">Order Now</button>
         </div>
-      </div>
 
-      <div
-        class="grid grid-cols-1 gap-[30px] mt-[30px] lg:grid lg:grid-cols-2 lg:m-[30px] lg:gap-[30px] lg:mt-[100px] lg:ml-[650px]"
-      >
-        <!-- --------------------------------------------------CARD1------------------------------- -->
-        <div class="card1 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg">
-          <img
-            src="./images/Ambur-Chicken-Biryani.jpg"
-            class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
-          />
-          <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
-            Ambur-Chicken-Biryani
-          </h1>
-          <p class="mt-[10px] text-center">
-            Ambur biryani is a delightful one-pot meal with succulent pieces of
-            meat cooked to perfection along with the aromatic jeera samba rice,
-            mint leaves, coriander leaves and whole spices. The flavor and taste
-            of meat is more dominant in Ambur biryani than the other ones due to
-            the fewer spices used.There's chicken, mutton, beef and prawn as
-            options, with the flavour of mint and coriander standing out.
-          </p>
-          <p class="text-center font-bold text-xl mt-[12px]">
-            Price:$<p1 class="AmburPrice">10</p1>
-          </p>
+        <div
+          class="flex w-full gap-[30px] flex-wrap items-center justify-center flex-3 overflow-auto max-h-[500px]"
+        >
+          <!-- --------------------------------------------------CARD1------------------------------- -->
+          <div
+            class="card1 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg"
+          >
+            <img
+              src="./images/Ambur-Chicken-Biryani.jpg"
+              class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
+            />
+            <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
+              Ambur-Chicken-Biryani
+            </h1>
+            <p class="mt-[10px] text-center">
+              Ambur biryani is a delightful one-pot meal with succulent pieces
+              of meat cooked to perfection along with the aromatic jeera samba
+              rice, mint leaves, coriander leaves and whole spices. The flavor
+              and taste of meat is more dominant in Ambur biryani than the other
+              ones due to the fewer spices used.There's chicken, mutton, beef
+              and prawn as options, with the flavour of mint and coriander
+              standing out.
+            </p>
+            <p class="text-center font-bold text-xl mt-[12px]">
+              Price:$<p1 class="AmburPrice">10</p1>
+            </p>
 
-          <input id="number1" class="mt-[20px] ml-[100px]" /><br />
-          <button class="ADD ml-[50px] mt-[30px] font-bold">Add To Card</button>
-          <button class="remove ml-[100px] mt-[30px] font-bold">Remove</button>
-        </div>
-        <!------------------------------------------ CARD2---------------------------------------------------- -->
-        <div class="card2 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg">
-          <img
-            src="./images/Butter-Masala-Dosa.png"
-            class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
-          />
-          <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
-            Butter-Masala-Dosa
-          </h1>
-          <p class="mt-[10px] text-center">
-            Butter-Masala-Dosa is a delightful one-pot meal with succulent
-            pieces of meat cooked to perfection along with the aromatic jeera
-            samba rice, mint leaves, coriander leaves and whole spices. The
-            flavor and taste of meat is more dominant in Ambur biryani than the
-            other ones due to the fewer spices used.There's chicken, mutton,
-            beef and prawn as options, with the flavour of mint and coriander
-            standing out.
-          </p>
-          <p class="text-center font-bold text-xl mt-[12px]">
-            Price:$<p1 class="Butter-Masala">12</p1>
-          </p>
+            <input id="number1" class="mt-[20px] ml-[100px]" /><br />
+            <button class="ADD ml-[50px] mt-[30px] font-bold">
+              Add To Card
+            </button>
+            <button class="remove ml-[100px] mt-[30px] font-bold">
+              Remove
+            </button>
+          </div>
+          <!------------------------------------------ CARD2---------------------------------------------------- -->
+          <div
+            class="card2 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg"
+          >
+            <img
+              src="./images/Butter-Masala-Dosa.png"
+              class="h-[200px] lg: ml-[0px] lg:w-[350px] w-full"
+            />
+            <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
+              Butter-Masala-Dosa
+            </h1>
+            <p class="mt-[10px] text-center">
+              Butter-Masala-Dosa is a delightful one-pot meal with succulent
+              pieces of meat cooked to perfection along with the aromatic jeera
+              samba rice, mint leaves, coriander leaves and whole spices. The
+              flavor and taste of meat is more dominant in Ambur biryani than
+              the other ones due to the fewer spices used.There's chicken,
+              mutton, beef and prawn as options, with the flavour of mint and
+              coriander standing out.
+            </p>
+            <p class="text-center font-bold text-xl mt-[12px]">
+              Price:$<p1 class="Butter-Masala">12</p1>
+            </p>
 
-          <input
-            type="number"
-            id="number2"
-            class="mt-[20px] ml-[100px]"
-          /><br />
-          <button class="ADD2 ml-[50px] mt-[30px] font-bold">
-            Add To Card
-          </button>
-          <button class="remove ml-[100px] mt-[30px] font-bold">Remove</button>
-        </div>
-        <!------------------------------------------ CARD3---------------------------------------------------- -->
-        <div class="card3 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg">
-          <img
-            src="./images/Chicken-Biryani-hyd.jpg"
-            class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
-          />
-          <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
-            Chicken-Biryani
-          </h1>
-          <p class="mt-[10px] text-center">
-            Chicken-Biryani is a delightful one-pot meal with succulent pieces
-            of meat cooked to perfection along with the aromatic jeera samba
-            rice, mint leaves, coriander leaves and whole spices. The flavor and
-            taste of meat is more dominant in Ambur biryani than the other ones
-            due to the fewer spices used.There's chicken, mutton, beef and prawn
-            as options, with the flavour of mint and coriander standing out.
-          </p>
-          <p class="text-center font-bold text-xl mt-[12px]">
-            Price:$<p1 class="Chicken-Biryani">12</p1>
-          </p>
+            <input
+              type="number"
+              id="number2"
+              class="mt-[20px] ml-[100px]"
+            /><br />
+            <button class="ADD2 ml-[50px] mt-[30px] font-bold">
+              Add To Card
+            </button>
+            <button class="remove ml-[100px] mt-[30px] font-bold">
+              Remove
+            </button>
+          </div>
+          <!------------------------------------------ CARD3---------------------------------------------------- -->
+          <div
+            class="card3 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg"
+          >
+            <img
+              src="./images/Chicken-Biryani-hyd.jpg"
+              class="h-[200px] lg: ml-[0px] lg:w-[350px] w-full"
+            />
+            <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
+              Chicken-Biryani
+            </h1>
+            <p class="mt-[10px] text-center">
+              Chicken-Biryani is a delightful one-pot meal with succulent pieces
+              of meat cooked to perfection along with the aromatic jeera samba
+              rice, mint leaves, coriander leaves and whole spices. The flavor
+              and taste of meat is more dominant in Ambur biryani than the other
+              ones due to the fewer spices used.There's chicken, mutton, beef
+              and prawn as options, with the flavour of mint and coriander
+              standing out.
+            </p>
+            <p class="text-center font-bold text-xl mt-[12px]">
+              Price:$<p1 class="Chicken-Biryani">12</p1>
+            </p>
 
-          <input
-            type="number"
-            id="number3"
-            class="mt-[20px] ml-[100px]"
-          /><br />
-          <button class="ADD3 ml-[50px] mt-[30px] font-bold">
-            Add To Card
-          </button>
-          <button class="remove ml-[100px] mt-[30px] font-bold">Remove</button>
-        </div>
-        <!------------------------------------------ CARD4---------------------------------------------------- -->
-        <div class="card4 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg">
-          <img
-            src="./images/Chicken-Curry.jpg"
-            class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
-          />
-          <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
-            Chicken-Biryani
-          </h1>
-          <p class="mt-[10px] text-center">
-            Chicken-Curry is a delightful one-pot meal with succulent pieces of
-            meat cooked to perfection along with the aromatic jeera samba rice,
-            mint leaves, coriander leaves and whole spices. The flavor and taste
-            of meat is more dominant in Ambur biryani than the other ones due to
-            the fewer spices used.There's chicken, mutton, beef and prawn as
-            options, with the flavour of mint and coriander standing out.
-          </p>
-          <p class="text-center font-bold text-xl mt-[12px]">
-            Price:$<p1 class="Chicken-Curry">15</p1>
-          </p>
+            <input
+              type="number"
+              id="number3"
+              class="mt-[20px] ml-[100px]"
+            /><br />
+            <button class="ADD3 ml-[50px] mt-[30px] font-bold">
+              Add To Card
+            </button>
+            <button class="remove ml-[100px] mt-[30px] font-bold">
+              Remove
+            </button>
+          </div>
+          <!------------------------------------------ CARD4---------------------------------------------------- -->
+          <div
+            class="card4 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg"
+          >
+            <img
+              src="./images/Chicken-Curry.jpg"
+              class="h-[200px] lg: ml-[0px] lg:w-[350px] w-full"
+            />
+            <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
+              Chicken-Biryani
+            </h1>
+            <p class="mt-[10px] text-center">
+              Chicken-Curry is a delightful one-pot meal with succulent pieces
+              of meat cooked to perfection along with the aromatic jeera samba
+              rice, mint leaves, coriander leaves and whole spices. The flavor
+              and taste of meat is more dominant in Ambur biryani than the other
+              ones due to the fewer spices used.There's chicken, mutton, beef
+              and prawn as options, with the flavour of mint and coriander
+              standing out.
+            </p>
+            <p class="text-center font-bold text-xl mt-[12px]">
+              Price:$<p1 class="Chicken-Curry">15</p1>
+            </p>
 
-          <input
-            type="number"
-            id="number4"
-            class="mt-[20px] ml-[100px]"
-          /><br />
-          <button class="ADD4 ml-[50px] mt-[30px] font-bold">
-            Add To Card
-          </button>
-          <button class="remove ml-[100px] mt-[30px] font-bold">Remove</button>
-        </div>
-        <!------------------------------------------ CARD5---------------------------------------------------- -->
-        <div class="card5 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg">
-          <img
-            src="./images/Chicken-do-Pyaza.jpg"
-            class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
-          />
-          <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
-            Chicken-Biryani
-          </h1>
-          <p class="mt-[10px] text-center">
-            Chicken-do-Pyaza is a delightful one-pot meal with succulent pieces
-            of meat cooked to perfection along with the aromatic jeera samba
-            rice, mint leaves, coriander leaves and whole spices. The flavor and
-            taste of meat is more dominant in Ambur biryani than the other ones
-            due to the fewer spices used.There's chicken, mutton, beef and prawn
-            as options, with the flavour of mint and coriander standing out.
-          </p>
-          <p class="text-center font-bold text-xl mt-[12px]">
-            Price:$<p1 class="Chicken-do-Pyaza">14</p1>
-          </p>
+            <input
+              type="number"
+              id="number4"
+              class="mt-[20px] ml-[100px]"
+            /><br />
+            <button class="ADD4 ml-[50px] mt-[30px] font-bold">
+              Add To Card
+            </button>
+            <button class="remove ml-[100px] mt-[30px] font-bold">
+              Remove
+            </button>
+          </div>
+          <!------------------------------------------ CARD5---------------------------------------------------- -->
+          <div
+            class="card5 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg"
+          >
+            <img
+              src="./images/Chicken-do-Pyaza.jpg"
+              class="h-[200px] lg: ml-[0px] lg:w-[350px] w-full"
+            />
+            <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
+              Chicken-Biryani
+            </h1>
+            <p class="mt-[10px] text-center">
+              Chicken-do-Pyaza is a delightful one-pot meal with succulent
+              pieces of meat cooked to perfection along with the aromatic jeera
+              samba rice, mint leaves, coriander leaves and whole spices. The
+              flavor and taste of meat is more dominant in Ambur biryani than
+              the other ones due to the fewer spices used.There's chicken,
+              mutton, beef and prawn as options, with the flavour of mint and
+              coriander standing out.
+            </p>
+            <p class="text-center font-bold text-xl mt-[12px]">
+              Price:$<p1 class="Chicken-do-Pyaza">14</p1>
+            </p>
 
-          <input
-            type="number"
-            id="number5"
-            class="mt-[20px] ml-[100px]"
-          /><br />
-          <button class="ADD5 ml-[50px] mt-[30px] font-bold">
-            Add To Card
-          </button>
-          <button class="remove ml-[100px] mt-[30px] font-bold">Remove</button>
-        </div>
-        <!------------------------------------------ CARD6---------------------------------------------------- -->
-        <div class="card6 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg">
-          <img
-            src="./images/Chicken-Masala.jpeg"
-            class="h-[200px] lg:ml-[20px] ml-[0px] lg:w-[350px] w-full"
-          />
-          <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
-            Chicken-Biryani
-          </h1>
-          <p class="mt-[10px] text-center">
-            Chicken-Masala is a delightful one-pot meal with succulent pieces of
-            meat cooked to perfection along with the aromatic jeera samba rice,
-            mint leaves, coriander leaves and whole spices. The flavor and taste
-            of meat is more dominant in Ambur biryani than the other ones due to
-            the fewer spices used.There's chicken, mutton, beef and prawn as
-            options, with the flavour of mint and coriander standing out.
-          </p>
-          <p class="text-center font-bold text-xl mt-[12px]">
-            Price:$<p1 class="Chicken-Masala">8</p1>
-          </p>
+            <input
+              type="number"
+              id="number5"
+              class="mt-[20px] ml-[100px]"
+            /><br />
+            <button class="ADD5 ml-[50px] mt-[30px] font-bold">
+              Add To Card
+            </button>
+            <button class="remove ml-[100px] mt-[30px] font-bold">
+              Remove
+            </button>
+          </div>
+          <!------------------------------------------ CARD6---------------------------------------------------- -->
+          <div
+            class="card6 lg:h-[650px] lg:w-[400px] lg:shadow-lg lg:rounded-lg"
+          >
+            <img
+              src="./images/Chicken-Masala.jpeg"
+              class="h-[200px] lg: ml-[0px] lg:w-[350px] w-full"
+            />
+            <h1 class="font-poppins font-bold text-center mt-[10px] text-2xl">
+              Chicken-Biryani
+            </h1>
+            <p class="mt-[10px] text-center">
+              Chicken-Masala is a delightful one-pot meal with succulent pieces
+              of meat cooked to perfection along with the aromatic jeera samba
+              rice, mint leaves, coriander leaves and whole spices. The flavor
+              and taste of meat is more dominant in Ambur biryani than the other
+              ones due to the fewer spices used.There's chicken, mutton, beef
+              and prawn as options, with the flavour of mint and coriander
+              standing out.
+            </p>
+            <p class="text-center font-bold text-xl mt-[12px]">
+              Price:$<p1 class="Chicken-Masala">8</p1>
+            </p>
 
-          <input
-            type="number"
-            id="number6"
-            class="mt-[20px] ml-[100px]"
-          /><br />
-          <button class="ADD6 ml-[50px] mt-[30px] font-bold">
-            Add To Card
-          </button>
-          <button class="remove ml-[100px] mt-[30px] font-bold">Remove</button>
+            <input
+              type="number"
+              id="number6"
+              class="mt-[20px] ml-[100px]"
+            /><br />
+            <button class="ADD6 ml-[50px] mt-[30px] font-bold">
+              Add To Card
+            </button>
+            <button class="remove ml-[100px] mt-[30px] font-bold">
+              Remove
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -411,55 +428,50 @@
       class="carousel slide"
       data-ride="carousel"
     >
-      <div class="carousel-inner">
-        <div
-          class="carousel-item active lg:h-[600px] lg:w-[600px] lg:shadow-lg lg:ml-[450px] lg:mt-[100px] lg:rounded-lg"
-        >
+      <div class="carousel-inner p-6">
+        <div class="carousel-item active w-full">
           <img
-            class="d-block w-[400px] h-[400px] rounded-lg lg:ml-[100px] ml-[0px]"
+            class="d-block w-[400px] h-[400px] m-auto"
             src="./images/chef1.png"
             alt="First slide"
           />
           <p class="text-center mt-[10px] font-bold text-2xl">
             Robert William <p1 class="text-lg font-medium">CEO,Kingfisher</p1>
           </p>
-          <h1 class="text-center text-base mt-[25px]">
+          <h1 class="text-base mt-[25px] py-4 px-56 text-center m-auto">
             Robert William CEO,Kingfisher Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Suscipit, ipsam. Ducimus aspernatur, sint sunt
             commodi quas ut tempora eius minima ad molestias voluptas excepturi
             nihil dolores, recusandae, magnam nulla vitae!
           </h1>
         </div>
-        <div
-          class="carousel-item lg:h-[600px] lg:w-[600px] lg:shadow-lg lg:ml-[450px] lg:mt-[100px] lg:rounded-lg"
-        >
+        <div class="carousel-item w-full">
           <img
-            class="d-block w-[400px] h-[400px] rounded-lg lg:ml-[100px] ml-[0px]"
-            src="./images/chef2.png"
+            class="d-block w-[400px] h-[400px] m-auto"
+            src="./images/chef1.png"
+            alt="First slide"
           />
           <p class="text-center mt-[10px] font-bold text-2xl">
-            Joe Root
-            <p1 class="text-lg font-medium">CEO,Getforce</p1>
+            Robert William <p1 class="text-lg font-medium">CEO,Kingfisher</p1>
           </p>
-          <h1 class="text-center text-base mt-[25px]">
+          <h1 class="text-base mt-[25px] py-4 px-56 text-center m-auto">
             Robert William CEO,Kingfisher Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Suscipit, ipsam. Ducimus aspernatur, sint sunt
             commodi quas ut tempora eius minima ad molestias voluptas excepturi
             nihil dolores, recusandae, magnam nulla vitae!
           </h1>
         </div>
-        <div
-          class="carousel-item lg:h-[600px] lg:w-[600px] lg:shadow-lg lg:ml-[450px] lg:mt-[100px] lg:rounded-lg"
-        >
+        <div class="carousel-item w-full">
           <img
-            class="d-block w-[400px] h-[400px] rounded-lg lg:ml-[100px] ml-[0px]"
-            src="./images/chef3.jpg"
+            class="d-block w-[400px] h-[400px] m-auto"
+            src="./images/chef1.png"
+            alt="First slide"
           />
           <p class="text-center mt-[10px] font-bold text-2xl">
-            Sturt Law <p1 class="text-lg font-medium">CEO,Kingfisher</p1>
+            Robert William <p1 class="text-lg font-medium">CEO,Kingfisher</p1>
           </p>
-          <h1 class="text-center text-base mt-[25px]">
-            Sturt Law CEO,MachRangafisher Lorem ipsum dolor sit amet consectetur
+          <h1 class="text-base mt-[25px] py-4 px-56 text-center m-auto">
+            Robert William CEO,Kingfisher Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Suscipit, ipsam. Ducimus aspernatur, sint sunt
             commodi quas ut tempora eius minima ad molestias voluptas excepturi
             nihil dolores, recusandae, magnam nulla vitae!
@@ -467,64 +479,62 @@
         </div>
       </div>
 
-      <a
-        class="carousel-control-prev"
+      <button
+        class="carousel-control-prev absolute left-0 bg-black w-6 z-40"
         href="#carouselExampleControls1"
         role="button"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </a>
-      <a
-        class="carousel-control-next"
+      </button>
+      <button
+        class="carousel-control-next absolute right-0 bg-black w-6 z-40"
         href="#carouselExampleControls1"
         role="button"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
-      </a>
+      </button>
     </div>
     <!-- --------------------------------------------------CONTRACT US------------------------ -->
     <div class="bac">
       <div class="">
         <h1 class="text-center font-bold text-4xl mt-[20px] text-gray-900">
-          Contract Us
+          Contact Us
         </h1>
       </div>
 
-      <div class="FoodTemplate lg:ml-[400px] lg:mt-[100px] mt-[50px]">
-        <img src="./images/food template.jpg" class="w-[700px] h-[700px]" />
+      <div
+        class="relative FoodTemplate mt-[40px] flex justify-center h-[700px] text-white max-w-[500px] mx-auto"
+      >
+        <img
+          src="./images/food template.jpg"
+          class="w-full object-fit rounded-lg"
+        />
 
-        <div
-          class="form absolute lg:absolute lg:w-[500px] lg:mt-[-600px] lg:h-[500px] lg:ml-[100px] mt-[-600px]"
-        >
+        <div class="contact absolute z-20 top-1/4">
           <!-- ----------------------------------------------NAME-------------------- -->
-          <div class="name text-xl font-bold ml-[50px] mt-[20px]">
+          <div class="name text-xl font-bold p-3">
             Name:
             <input type="text" class="shadow-lg" />
           </div>
           <!-- --------------------------------------------Email-------------------- -->
-          <div
-            class="email text-xl font-bold lg:ml-[50px] lg:mt-[0px] ml-[50px] mt-[50px]"
-          >
+          <div class="email text-xl font-bold p-3">
             Email:
-            <input
-              type="Email"
-              class="shadow-lg border-green-300 lg:mt-[30px]"
-            />
+            <input type="Email" class="shadow-lg border-green-300" />
           </div>
           <!----------------------------TextArea---------------------------------->
           <div class="textArea">
             <label
               for="message"
-              class="text-center mt-[50px] text-2xl block mb-2 font-bold text-gray-900 dark:text-white"
+              class="text-center mt-[50px] text-2xl block mb-2 font-bold text-gray-900 dark:text-white p-3"
               >Your message</label
             >
             <textarea
               id="message"
               rows="6"
-              class="block lg:w-[400px] w-[300px] lg:ml-[50px] ml-[30px] mt-[20px] p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="block lg:w-[400px] w-[300px] mt-[20px] p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Write your thoughts here..."
             ></textarea>
           </div>
@@ -537,8 +547,13 @@
         </div>
       </div>
     </div>
+
+    <!-- extra -->
+    <footer
+      class="footer_fixed fixed bottom-0 w-100 bg-light bg-gradient z-50"
+    ></footer>
     <!------------------------------------------------ FOOTER------------------------------------ -->
-    <div class="footer bg-black lg:w-full lg:h-[200px] lg:mt-[20px] mt-[20px]">
+    <div class="footer bg-black lg:w-full lg:h-[200px] lg:mt-[20px] my-[20px]">
       <h1 class="text-white text-center text-3xl lg:text-5xl font-bold">
         Future
       </h1>
@@ -555,6 +570,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="script.js"></script>
+    <script src="card.js"></script>
   </body>
 </html>
